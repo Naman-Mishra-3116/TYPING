@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <header class="main-header Extracontainer">
+      <h2 class="companyname">
+        TypingTest<span class="io">.io</span> by
+        <a
+          href="https://github.com/Naman-Mishra-3116"
+          target="_self"
+          class="logo"
+          ><img src="logo/final-logo-coursey.png" class="logo-img" alt="NM"
+          width=60" height="60" /></a
+        >
+      </h2>
+
+      <nav class="main-navigation">
+        <a
+          href="/test"
+          onclick="addBackground(this, '.nav-button','active')"
+          class="nav-button"
+          >Test</a
+        >
+        <a
+          href="/Leaderboard"
+          onclick="addBackground(this, '.nav-button', 'active')"
+          class="nav-button"
+          >Leaderboard</a
+        >
+        <a
+          href="https://discord.com/invite/FtddS6Fwve"
+          onclick="addBackground(this, '.nav-button','active')"
+          class="nav-button"
+          >Discord</a
+        >
+        <a
+          href="/about"
+          onclick="addBackground(this, '.nav-button','active')"
+          class="nav-button"
+          >About</a
+        >
+        <%if(obj){ %>
+
+        <div class="nav-button name-display">
+          <p><%=obj.name%></p>
+        </div>
+
+        <%}else{ %>
+        <a
+          href="/login"
+          onclick="addBackground(this, '.nav-button','active')"
+          class="nav-button login log-in-click"
+          >Login</a
+        >
+        <a
+          href="/signup"
+          onclick="addBackground(this, '.nav-button','active')"
+          class="nav-button sign-up"
+          >Sign up</a
+        >
+        <%} %>
+      </nav>
+    </header>
+  </body>
+</html>

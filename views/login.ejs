@@ -1,0 +1,71 @@
+<%- include("partials/header.ejs", {obj: obj}) %>
+<section class="form-section Extracontainer forLogin">
+  <div class="final-container">
+    <% if(error){ %>
+    <div class="heading" style="color: red">Incorrect Details</div>
+    <form action="/login" class="input-form" name="sign-up" method="post">
+      <div class="first">
+        <label for="text" style="color: red">Email</label>
+        <input
+          type="email"
+          name="username"
+          id="text"
+          style="border: 1px solid red"
+          required
+        />
+      </div>
+      <div class="third">
+        <label for="password" style="color: red">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          style="border: 1px solid red"
+          required
+        />
+      </div>
+      <button type="submit" class="button-for-input">Try Again</button>
+
+      <div class="have">
+        <span>Forgot Password</span
+        ><span><a href="/reset">Reset Password</a></span>
+      </div>
+      <div class="have">
+        <span>Don't Have an account?</span
+        ><span class="sign-up"><a href="/signup">Sign-up</a></span>
+      </div>
+    </form>
+    <%}else{ %>
+    <div class="heading">Log in</div>
+    <form action="/login" class="input-form" name="sign-up" method="post">
+      <div class="first">
+        <label for="text">Email</label>
+        <input type="text" name="email" id="text" required />
+      </div>
+      <div class="third">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+      <button type="submit" class="button-for-input">Login</button>
+
+      <div class="have">
+        <span>Forgot Password</span
+        ><span><a href="/reset">Reset Password</a></span>
+      </div>
+      <div class="have">
+        <span>Don't Have an account?</span
+        ><span class="sign-up"><a href="/signup">Sign-up</a></span>
+      </div>
+    </form>
+    <% } %>
+  </div>
+</section>
+<style>
+  .nav-button:nth-child(5) {
+    background-color: #191919;
+  }
+  .nav-button:nth-child(1) {
+    background-color: #1585e0;
+  }
+</style>
+<%- include("partials/footer.ejs") %>

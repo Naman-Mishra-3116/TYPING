@@ -1,0 +1,58 @@
+<%- include("partials/header.ejs", {obj: obj}) %>
+<section class="form-section Extracontainer forSignUp">
+  <div class="final-container">
+    <%if(error){ %>
+    
+    <div class="heading" style="color: greenyellow;">Email and Username is already Taken 😢</div>
+    <form action="/signup" class="input-form" method="post">
+      <div class="first">
+        <label for="text">Username</label>
+        <input type="text" name="username" id="text" required />
+      </div>
+      <div class="second">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="third">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+      <button type="submit" class="button-for-input">sign up</button>
+      <div class="have">
+        <span>Already have an account?</span
+        ><span class="log-in-click"><a href="/login">Log-in</a></span>
+      </div>
+    </form>
+    <% }else{ %>
+    <div class="heading">Create Account</div>
+    <form action="/signup" class="input-form" method="post">
+      <div class="first">
+        <label for="text">Username</label>
+        <input type="text" name="username" id="text" required />
+      </div>
+      <div class="second">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="third">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+      <button type="submit" class="button-for-input">sign up</button>
+      <div class="have">
+        <span>Already have an account?</span
+        ><span class="log-in-click"><a href="/login">Log-in</a></span>
+      </div>
+    </form>
+    <% } %>
+  </div>
+</section>
+<style>
+  .nav-button:nth-child(1) {
+    background-color: #1585e0;
+  }
+  .nav-button:nth-child(6) {
+    background-color: #1585e0;
+  }
+</style>
+<%- include("partials/footer.ejs") %>

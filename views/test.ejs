@@ -1,0 +1,194 @@
+<%- include("partials/header.ejs", {obj: obj}) %>
+<main class="container">
+  <section class="typing">
+    <div class="content">
+      <div id="words" class="typing-content">
+        <div class="inner-word">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          obcaecati distinctio odit aut quis omnis illo recusandae culpa autem
+          blanditiis nobis nam animi, ex repudiandae expedita impedit optio quam
+          officia?
+        </div>
+      </div>
+    </div>
+    <div class="entry">
+      <input type="text" class="typer" />
+      <div class="on-right-side">
+        <div class="wpm"><span> 100 WPM </span></div>
+        <div class="time"><span> 1:00 </span></div>
+        <button class="restart">
+          <ion-icon name="repeat-outline" class="repeat"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="resultoftyping">
+    <div class="left">
+      <div class="raw-speed">
+        <h2>0 <span class="speed-wpm">WPM</span></h2>
+      </div>
+      <ul class="stats">
+        <li class="stat-item"><span>Raw WPM</span><span>&mdash;</span></li>
+        <li class="stat-item"><span>Accuracy</span><span>&mdash;</span></li>
+        <li class="stat-item">
+          <span>Correct Characters </span><span>&mdash;</span>
+        </li>
+        <li class="stat-item">
+          <span>Incorrect Characters</span><span>&mdash;</span>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul class="settinglist">
+        <li>
+          <span>Test Duration</span>
+          <div class="span-container">
+            <span
+              class="test-duration-span"
+              onclick="addBackground(this,'.test-duration-span','selected-span')"
+              >0:10</span
+            >
+            <span
+              class="test-duration-span"
+              onclick="addBackground(this,'.test-duration-span','selected-span')"
+              >0:30</span
+            >
+            <span
+              class="test-duration-span"
+              onclick="addBackground(this,'.test-duration-span','selected-span')"
+              >1:00</span
+            >
+            <span
+              class="test-duration-span"
+              onclick="addBackground(this,'.test-duration-span','selected-span')"
+              >2:00</span
+            >
+            <span
+              class="test-duration-span"
+              onclick="addBackground(this,'.test-duration-span','selected-span')"
+              >5:00</span
+            >
+          </div>
+        </li>
+        <li>
+          <span>Highlight Style</span>
+          <div class="span-container">
+            <span
+              class="highlight-style-span"
+              onclick="addBackground(this,'.highlight-style-span','selected-span')"
+              >Character</span
+            >
+            <span
+              class="highlight-style-span"
+              onclick="addBackground(this,'.highlight-style-span','selected-span')"
+              >caret</span
+            >
+            <span
+              class="highlight-style-span"
+              onclick="addBackground(this,'.highlight-style-span','selected-span')"
+              >Word</span
+            >
+          </div>
+        </li>
+        <li>
+          <span>Highlight input on error</span>
+          <div class="span-container">
+            <span
+              class="on-error"
+              onclick="addBackground(this,'.on-error','selected-span')"
+              >on</span
+            >
+            <span
+              class="on-error"
+              onclick="addBackground(this,'.on-error','selected-span')"
+              >off</span
+            >
+          </div>
+        </li>
+        <li>
+          <span>Word List</span>
+          <div class="span-container">
+            <span
+              class="word"
+              onclick="addBackground(this,'.word','selected-span')"
+              >Simple</span
+            >
+            <span
+              class="word"
+              onclick="addBackground(this,'.word','selected-span')"
+              >Advance</span
+            >
+          </div>
+        </li>
+        <li>
+          <span>Punctuation</span>
+          <div class="span-container">
+            <span
+              class="punch"
+              onclick="addBackground(this,'.punch','selected-span')"
+              >on</span
+            >
+            <span
+              class="punch"
+              onclick="addBackground(this,'.punch','selected-span')"
+              >off</span
+            >
+          </div>
+        </li>
+        <li>
+          <span>Numbers</span>
+          <div class="span-container">
+            <span
+              class="numbers"
+              onclick="addBackground(this,'.numbers','selected-span')"
+              >on</span
+            >
+            <span
+              class="numbers"
+              onclick="addBackground(this,'.numbers','selected-span')"
+              >off</span
+            >
+          </div>
+        </li>
+        <li>
+          <span>Show WPM</span>
+          <div class="span-container">
+            <span
+              class="show-wpm"
+              onclick="addBackground(this,'.show-wpm','selected-span')"
+              >Show</span
+            >
+            <span
+              class="show-wpm"
+              onclick="addBackground(this,'.show-wpm','selected-span')"
+              >Hide</span
+            >
+          </div>
+        </li>
+        <li>
+          <span>Show Timer</span>
+          <div class="span-container">
+            <span
+              class="show-timer"
+              onclick="addBackground(this,'.show-timer','selected-span')"
+              >Show</span
+            >
+            <span
+              class="show-timer"
+              onclick="addBackground(this,'.show-timer','selected-span')"
+              >Hide</span
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<style>
+  .nav-button:nth-child(1) {
+    background-color: #191919;
+  }
+</style>
+<%- include("partials/footer.ejs") %>

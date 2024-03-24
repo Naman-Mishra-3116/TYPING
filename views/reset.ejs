@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs", {obj: obj}) %>
+<section class="form-section Extracontainer forSignUp">
+  <div class="final-container">
+    <div class="heading">Reset Password</div>
+    <form action="/reset" class="input-form" method="post">
+      <div class="second">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <button type="submit" class="button-for-input">
+        Send Password Reset Link
+      </button>
+      <div class="have">
+        <span>Want to try again?</span
+        ><span class="log-in-click"><a href="/login">Go Back</a></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+  .nav-button:nth-child(1) {
+    background-color: #1585e0;
+  }
+  .nav-button:nth-child(6) {
+    background-color: #1585e0;
+  }
+  .nav-button:nth-child(5) {
+    background-color: #191919;
+  }
+</style>
+<%- include("partials/footer.ejs") %>
